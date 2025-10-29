@@ -1,13 +1,16 @@
 import Hero from "@/components/Hero";
-import About from "@/components/About";
+import ExperienceTimeline from "@/components/ExperienceTimeline";
+import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
+import AnimatedBackground from "@/components/AnimatedBackground";
 
 export default function Home() {
   return (
     <main className="relative">
+      <AnimatedBackground />
       <Hero />
-      <About />
-      {/* Work, Experience, Skills sections will slot here next */}
+      <ExperienceTimeline />
+      <Skills />
       <Contact />
     </main>
   );

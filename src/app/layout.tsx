@@ -1,6 +1,8 @@
 "use client";
+
 import { useEffect } from "react";
-import Lenis from "@studio-freight/lenis";
+import Lenis from "lenis";
+import "./globals.css";
 
 export default function RootLayout({
   children,
@@ -8,16 +10,30 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   useEffect(() => {
-    const l = new Lenis({ duration: 1.1 });
-    const r = (t: number) => {
-      l.raf(t);
-      requestAnimationFrame(r);
+    // Respect reduced motion
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const lenis = new Lenis({
+      duration: 1.1, // feel of the scroll
+      smoothWheel: true, // wheel smoothing
+      smoothTouch: false, // keep touch native (optional)
+    });
+
+    let rafId = 0;
+    const raf = (time: number) => {
+      lenis.raf(time);
+      rafId = requestAnimationFrame(raf);
     };
-    requestAnimationFrame(r);
-    return () => l.destroy();
+    rafId = requestAnimationFrame(raf);
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      lenis.destroy();
+    };
   }, []);
+
   return (
-    <html>
+    <html lang="en" className="lenis">
       <body>{children}</body>
     </html>
   );
