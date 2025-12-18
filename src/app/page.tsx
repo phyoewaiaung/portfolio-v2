@@ -10,8 +10,8 @@ export default function Home() {
       <AnimatedBackground />
       <Hero />
       <ExperienceTimeline />
-      <Skills />
-      <Contact />
+      {/* <Skills />
+      <Contact /> */}
     </main>
   );
 }

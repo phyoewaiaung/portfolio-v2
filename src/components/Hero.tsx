@@ -1,187 +1,142 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, Download, ArrowDown } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
-import Link from "next/link";
 
 export default function Hero() {
   const reduce = useReducedMotion();
 
   const scrollToWork = () => {
-    document
-      .getElementById("experience")
-      ?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("experience")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative flex min-h-[100svh] items-center overflow-hidden px-6 sm:px-8"
     >
-      {/* Radial gradient overlay for depth */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(139,92,246,0.1),transparent_50%)]" />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(6,182,212,0.1),transparent_50%)]" />
-
-      <div className="relative z-10 mx-auto max-w-6xl px-6 py-32 text-center">
-        {/* Animated greeting */}
+      {/* Fixed top greeting badge */}
+      <div className="fixed top-4 inset-x-0 z-50 flex justify-center px-4">
         <motion.div
           initial={reduce ? false : { opacity: 0, scale: 0.9 }}
           animate={reduce ? {} : { opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="mb-4 inline-block"
+          className="inline-flex"
         >
-          <span className="inline-flex items-center gap-2 rounded-full border border-violet-400/20 bg-violet-400/10 px-4 py-2 text-sm text-violet-300 backdrop-blur">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-violet-400 opacity-75"></span>
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-violet-500"></span>
+          <span className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-5 py-2 text-xs sm:text-sm font-medium text-emerald-300 backdrop-blur-sm">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
             </span>
-            Available for opportunities
+            👋 Hi There! I'm PHYO WAI AUNG
           </span>
         </motion.div>
+      </div>
 
-        {/* Main headline with stunning gradient */}
-        <motion.h1
-          initial={reduce ? false : { opacity: 0, y: 20 }}
-          animate={reduce ? {} : { opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.1 }}
-          className="relative mb-6 text-[clamp(2.5rem,8vw,6rem)] font-black leading-[0.9] tracking-tight"
-        >
-          <span className="block bg-gradient-to-r from-white via-white to-white/80 bg-clip-text text-transparent">
-            Hi, I'm
-          </span>
-          <span className="relative block mt-2">
-            <span className="bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400 bg-clip-text text-transparent animate-gradient">
-              Phyo Wai Aung
-            </span>
-            {/* Glow effect behind name */}
-            <span
-              aria-hidden
-              className="absolute inset-0 blur-3xl opacity-30 bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400"
-            >
-              Phyo Wai Aung
-            </span>
-          </span>
-        </motion.h1>
-
-        {/* Animated role titles */}
-        <motion.div
-          initial={reduce ? false : { opacity: 0, y: 20 }}
-          animate={reduce ? {} : { opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="mb-8 text-2xl md:text-3xl font-semibold text-slate-300"
-        >
-          <span className="inline-block">Full-Stack Developer</span>
-          <span className="mx-3 text-violet-400">•</span>
-          <span className="inline-block">Software Engineer</span>
-        </motion.div>
-
-        <motion.p
-          initial={reduce ? false : { opacity: 0, y: 20 }}
-          animate={reduce ? {} : { opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          className="mx-auto mb-12 max-w-2xl text-lg text-slate-400 leading-relaxed"
-        >
-          Crafting seamless, high-performance applications with modern
-          technologies. Specialized in React, TypeScript, and building scalable
-          web solutions.
-        </motion.p>
-
-        {/* CTA Buttons */}
-        <motion.div
-          initial={reduce ? false : { opacity: 0, y: 20 }}
-          animate={reduce ? {} : { opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
-          className="mb-12 flex flex-wrap items-center justify-center gap-4"
-        >
-          <Button
-            size="lg"
-            onClick={scrollToWork}
-            className="group relative overflow-hidden bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white shadow-lg shadow-violet-500/50 hover:shadow-xl hover:shadow-violet-500/60 transition-all duration-300"
+      {/* Content grid */}
+      <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-10 md:grid-cols-2 lg:gap-16">
+        {/* LEFT: Text */}
+        <div className="order-2 md:order-1 text-center md:text-left">
+          <motion.h1
+            initial={reduce ? false : { opacity: 0, y: 20 }}
+            animate={reduce ? {} : { opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="font-black leading-tight tracking-tight text-white"
           >
-            <span className="relative z-10 flex items-center gap-2">
-              View My Work
-              <ArrowDown className="h-4 w-4 group-hover:translate-y-1 transition-transform" />
+            <span className="block font-mono text-emerald-400 text-[clamp(2rem,3.8vw,2.6rem)] mb-2">
+              Software Engineer
             </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-violet-600 to-fuchsia-600 opacity-0 group-hover:opacity-100 transition-opacity" />
-          </Button>
 
-          <Button
-            asChild
-            size="lg"
-            variant="outline"
-            className="border-violet-400/30 bg-violet-400/5 text-white hover:bg-violet-400/10 hover:border-violet-400/50 backdrop-blur transition-all duration-300"
-          >
-            <a
-              href="mailto:phyowaiaung.pxyo@gmail.com"
-              className="flex items-center gap-2"
-            >
-              <Mail className="h-4 w-4" />
-              Get in Touch
-            </a>
-          </Button>
-
-          <Button
-            asChild
-            size="lg"
-            variant="outline"
-            className="border-cyan-400/30 bg-cyan-400/5 text-white hover:bg-cyan-400/10 hover:border-cyan-400/50 backdrop-blur transition-all duration-300"
-          >
-            <a href="/resume.pdf" download className="flex items-center gap-2">
-              <Download className="h-4 w-4" />
-              Download CV
-            </a>
-          </Button>
-        </motion.div>
-
-        {/* Social links with hover effects */}
-        <motion.div
-          initial={reduce ? false : { opacity: 0 }}
-          animate={reduce ? {} : { opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
-          className="flex justify-center gap-4"
-        >
-          {[
-            {
-              icon: Github,
-              href: "https://github.com/phyoewaiaung",
-              label: "GitHub",
-            },
-            {
-              icon: Linkedin,
-              href: "https://www.linkedin.com/in/phyoewaiaung082/",
-              label: "LinkedIn",
-            },
-            {
-              icon: Mail,
-              href: "mailto:phyowaiaung.pxyo@gmail.com",
-              label: "Email",
-            },
-          ].map(({ icon: Icon, href, label }) => (
-            <Link
-              key={label}
-              aria-label={label}
-              href={href}
-              className="group relative flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/5 backdrop-blur transition-all duration-300 hover:border-violet-400/50 hover:bg-white/10 hover:scale-110"
-            >
-              <Icon className="h-5 w-5 text-slate-300 group-hover:text-violet-400 transition-colors" />
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-violet-400/20 to-cyan-400/20 opacity-0 group-hover:opacity-100 blur transition-opacity" />
-            </Link>
-          ))}
-        </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        >
-          <div className="flex flex-col items-center gap-2 text-slate-500">
-            <span className="text-xs uppercase tracking-wider">
-              Scroll to explore
+            <span className="block text-[clamp(2.2rem,6vw,4.8rem)]">
+              Let’s build something we can be{" "}
+              <span className="relative inline-block">
+                <span className="text-emerald-400">Proud</span>
+                <svg
+                  className="absolute -bottom-2 left-0 w-full"
+                  height="8"
+                  viewBox="0 0 100 8"
+                  preserveAspectRatio="none"
+                >
+                  <path
+                    d="M0,4 Q25,0 50,4 T100,4"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    className="text-emerald-400/50"
+                  />
+                </svg>
+              </span>{" "}
+              of.
             </span>
-            <div className="h-8 w-[2px] bg-gradient-to-b from-violet-400 to-transparent animate-pulse" />
+
+          </motion.h1>
+
+          {/* Improved description UI */}
+          <div className="mt-6 space-y-4">
+            <motion.p
+              initial={reduce ? false : { opacity: 0, y: 20 }}
+              animate={reduce ? {} : { opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="text-justify font-bold font-[Gill Sans] mb-4 text-base md:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0"
+            >
+              Experienced Software Engineer with a proven track record of developing seamless, high-performance applications and delivering impactful digital solutions.
+            </motion.p>
+
+            <motion.p
+              initial={reduce ? false : { opacity: 0, y: 20 }}
+              animate={reduce ? {} : { opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.25 }}
+              className="text-justify font-bold font-[Gill Sans] mb-4 text-base md:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0"
+            >
+              Passionate about contributing to innovative projects in dynamic, forward-thinking environments.
+            </motion.p>
+
+            {/* Tiny accent bullets for quick scanning */}
+            {/* <motion.ul
+              initial={reduce ? false : { opacity: 0, y: 20 }}
+              animate={reduce ? {} : { opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.25 }}
+              className="mx-auto md:mx-0 max-w-2xl grid gap-2 sm:grid-cols-2 text-slate-300 text-sm">
+              {[
+                "Outcome-driven & detail-oriented",
+                "Clear communication & ownership",
+                "User-first product mindset",
+                "Performance & DX focused",
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2 border bg-transparent border-blue-100 border-opacity-10 rounded w-fit px-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-gradient-to-r from-emerald-400 to-teal-400" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </motion.ul> */}
+          </div>
+
+        </div>
+
+        {/* RIGHT: Image */}
+        <motion.div
+          initial={reduce ? false : { opacity: 0, y: 16, scale: 0.98 }}
+          animate={reduce ? {} : { opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.7, delay: 0.15 }}
+          className="order-1 md:order-2 pt-[7vh] md:pt-0"
+        >
+          {/* Gradient frame */}
+          <div className="relative mx-auto w-full max-w-[520px]">
+            <div className="relative rounded-3xl p-[1px] bg-gradient-to-br from-emerald-400/40 via-cyan-400/30 to-fuchsia-400/40 shadow-[0_20px_80px_-30px_rgba(16,185,129,.35)]">
+              <div className="rounded-3xl bg-slate-900/40 backdrop-blur-sm">
+                <div className="relative aspect-[5/4] overflow-hidden rounded-3xl">
+                  <div className="w-full h-full bg-slate-800 rounded-3xl" />
+                  {/* subtle vignette */}
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/30 to-transparent" />
+                </div>
+              </div>
+            </div>
+
+            {/* Floating corner badge */}
+            <div className="pointer-events-none absolute -top-3 -left-3 hidden sm:block">
+              <div className="rounded-xl bg-emerald-400/15 px-3 py-1.5 text-xs font-medium text-emerald-300 ring-1 ring-emerald-400/30 backdrop-blur">
+                Available for new projects
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>
