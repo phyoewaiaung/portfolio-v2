@@ -1,12 +1,15 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import Model3DViewer from "./Model3DViewer";
 
 export default function Hero() {
   const reduce = useReducedMotion();
 
   const scrollToWork = () => {
-    document.getElementById("experience")?.scrollIntoView({ behavior: "smooth" });
+    document
+      .getElementById("experience")
+      ?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -67,7 +70,6 @@ export default function Hero() {
               </span>{" "}
               of.
             </span>
-
           </motion.h1>
 
           {/* Improved description UI */}
@@ -78,7 +80,9 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="text-justify font-bold font-[Gill Sans] mb-4 text-base md:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0"
             >
-              Experienced Software Engineer with a proven track record of developing seamless, high-performance applications and delivering impactful digital solutions.
+              Experienced Software Engineer with a proven track record of
+              developing seamless, high-performance applications and delivering
+              impactful digital solutions.
             </motion.p>
 
             <motion.p
@@ -87,7 +91,8 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.25 }}
               className="text-justify font-bold font-[Gill Sans] mb-4 text-base md:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0"
             >
-              Passionate about contributing to innovative projects in dynamic, forward-thinking environments.
+              Passionate about contributing to innovative projects in dynamic,
+              forward-thinking environments.
             </motion.p>
 
             {/* Tiny accent bullets for quick scanning */}
@@ -109,7 +114,6 @@ export default function Hero() {
               ))}
             </motion.ul> */}
           </div>
-
         </div>
 
         {/* RIGHT: Image */}
@@ -124,7 +128,7 @@ export default function Hero() {
             <div className="relative rounded-3xl p-[1px] bg-gradient-to-br from-emerald-400/40 via-cyan-400/30 to-fuchsia-400/40 shadow-[0_20px_80px_-30px_rgba(16,185,129,.35)]">
               <div className="rounded-3xl bg-slate-900/40 backdrop-blur-sm">
                 <div className="relative aspect-[5/4] overflow-hidden rounded-3xl">
-                  <div className="w-full h-full bg-slate-800 rounded-3xl" />
+                  <Model3DViewer />
                   {/* subtle vignette */}
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/30 to-transparent" />
                 </div>
