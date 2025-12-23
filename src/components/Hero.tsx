@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import Model3DViewer from "./Model3DViewer";
+import ProfileImage from "./ProfileImage";
 
 export default function Hero() {
   const reduce = useReducedMotion();
@@ -123,23 +123,9 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="order-1 md:order-2 pt-[7vh] md:pt-0"
         >
-          {/* Gradient frame */}
           <div className="relative mx-auto w-full max-w-[520px]">
-            <div className="relative rounded-3xl p-[1px] bg-gradient-to-br from-emerald-400/40 via-cyan-400/30 to-fuchsia-400/40 shadow-[0_20px_80px_-30px_rgba(16,185,129,.35)]">
-              <div className="rounded-3xl bg-slate-900/40 backdrop-blur-sm">
-                <div className="relative aspect-[5/4] overflow-hidden rounded-3xl">
-                  <Model3DViewer />
-                  {/* subtle vignette */}
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/30 to-transparent" />
-                </div>
-              </div>
-            </div>
-
-            {/* Floating corner badge */}
-            <div className="pointer-events-none absolute -top-3 -left-3 hidden sm:block">
-              <div className="rounded-xl bg-emerald-400/15 px-3 py-1.5 text-xs font-medium text-emerald-300 ring-1 ring-emerald-400/30 backdrop-blur">
-                Available for new projects
-              </div>
+            <div className="relative aspect-[5/4] overflow-hidden">
+              <ProfileImage />
             </div>
           </div>
         </motion.div>

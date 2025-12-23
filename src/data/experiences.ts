@@ -8,6 +8,9 @@ export type Experience = {
   role: string;
   location: string;
   period: string;
+  logo: string;
+  flag: string;
+  website: string;
 
   headline: string;
   bullets: string[];
@@ -25,6 +28,9 @@ export const experiences: Experience[] = [
     role: "Frontend Developer",
     location: "Thailand",
     period: "Oct 2023 – Present",
+    logo: "/images/xenoptics.png",
+    flag: "/images/emojione--flag-for-thailand.png",
+    website: "https://xenoptics.com/",
 
     headline:
       "Specialized in real-time network visualization and performance-critical dashboards.",
@@ -46,6 +52,9 @@ export const experiences: Experience[] = [
     role: "Software Engineer",
     location: "Myanmar",
     period: "Aug 2022 – Sep 2023",
+    logo: "/images/brycen.png",
+    flag: "/images/emojione--flag-for-myanmar.png",
+    website: "https://www.brycenmyanmar.com.mm/",
 
     headline:
       "Delivered full-stack systems across HR, booking, and resume platforms.",
@@ -67,6 +76,9 @@ export const experiences: Experience[] = [
     role: "Frontend Developer Intern",
     location: "Myanmar",
     period: "May 2022 – Aug 2022",
+    logo: "/images/brycen.png",
+    flag: "/images/emojione--flag-for-myanmar.png",
+    website: "https://www.brycenmyanmar.com.mm/",
 
     headline:
       "Built a strong foundation in frontend engineering and development workflows.",

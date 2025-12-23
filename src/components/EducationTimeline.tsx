@@ -1,0 +1,82 @@
+"use client";
+import { Education } from "@/data/education";
+import { motion } from "framer-motion";
+
+export default function EducationTimeline({ items }: { items: Education[] }) {
+  return (
+    <section className="relative max-w-6xl mx-auto px-6 pb-16">
+      {/* Header */}
+      <header className="text-center mb-16">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black">
+          <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            Education
+          </span>
+        </h2>
+        <p className="text-slate-400 mt-3 sm:mt-4 max-w-2xl mx-auto text-sm sm:text-base px-4">
+          Academic journey and educational achievements that shaped my technical
+          foundation.
+        </p>
+      </header>
+
+      {/* Horizontal Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {items.map((item, index) => (
+          <EducationCard key={item.id} item={item} index={index} />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+/* ======================================================
+   Education Card
+====================================================== */
+
+function EducationCard({ item, index }: { item: Education; index: number }) {
+  return (
+    <motion.article
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
+      className="group rounded-2xl bg-slate-900/80 border border-slate-700/60 p-6 backdrop-blur-md shadow-xl hover:border-blue-500/40 transition-all duration-300"
+    >
+      {/* Institution Logo and Name */}
+      <div className="flex items-center gap-3 mb-3">
+        <img
+          src={item.logo}
+          alt={`${item.institution} logo`}
+          width={64}
+          height={64}
+          className="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-contain"
+        />
+        <div>
+          <h3 className="text-xl md:text-2xl font-bold text-white mb-1 group-hover:text-blue-300 transition-colors">
+            {item.institution}
+          </h3>
+          <p className="text-blue-300 font-medium text-sm">{item.degree}</p>
+        </div>
+      </div>
+
+      {/* Period */}
+      <div className="text-sm sm:text-base font-bold text-slate-300 mb-4">
+        {item.period}
+      </div>
+
+      {/* Headline */}
+      <p className="text-slate-200 font-medium leading-relaxed text-sm mb-4">
+        {item.headline}
+      </p>
+
+      {/* Bullets */}
+      <ul className="space-y-2 text-slate-300 text-sm mb-4">
+        {item.bullets.map((b) => (
+          <li key={b} className="flex gap-3">
+            <span className="mt-1.5 h-1 w-1 rounded-full bg-blue-400 flex-shrink-0" />
+            <span>{b}</span>
+          </li>
+        ))}
+      </ul>
+    </motion.article>
+  );
+}
