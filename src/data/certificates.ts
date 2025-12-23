@@ -26,7 +26,7 @@ export const certificates: Certificate[] = [
     date: "2023",
 
     description:
-      "Comprehensive React development course covering hooks, state management, and modern frontend patterns.",
+      "Comprehensive React development course covering hooks, state management, and modern frontend patterns. ",
 
     link: "https://www.freecodecamp.org/certification/your-cert-link",
 
