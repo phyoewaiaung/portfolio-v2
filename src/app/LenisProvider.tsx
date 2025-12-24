@@ -4,32 +4,31 @@ import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 
 export default function LenisProvider({
-    children,
+  children,
 }: {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }) {
-    useEffect(() => {
-        const lenis = new Lenis({
-            smoothWheel: true,
-            smoothTouch: false,
-            lerp: 0.08,
-            wheelMultiplier: 1,
-        });
+  useEffect(() => {
+    const lenis = new Lenis({
+      smoothWheel: true,
+      lerp: 0.08,
+      wheelMultiplier: 1,
+    });
 
-        let rafId: number;
+    let rafId: number;
 
-        function raf(time: number) {
-            lenis.raf(time);
-            rafId = requestAnimationFrame(raf);
-        }
+    function raf(time: number) {
+      lenis.raf(time);
+      rafId = requestAnimationFrame(raf);
+    }
 
-        rafId = requestAnimationFrame(raf);
+    rafId = requestAnimationFrame(raf);
 
-        return () => {
-            cancelAnimationFrame(rafId);
-            lenis.destroy();
-        };
-    }, []);
+    return () => {
+      cancelAnimationFrame(rafId);
+      lenis.destroy();
+    };
+  }, []);
 
-    return <>{children}</>;
+  return <>{children}</>;
 }
