@@ -19,20 +19,14 @@ export default function Hero() {
     >
       {/* Fixed top greeting badge */}
       <div className="fixed top-4 inset-x-0 z-50 flex justify-center px-4">
-        <motion.div
-          initial={reduce ? false : { opacity: 0, scale: 0.9 }}
-          animate={reduce ? {} : { opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="inline-flex"
-        >
-          <span className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-5 py-2 text-xs sm:text-sm font-medium text-emerald-300 backdrop-blur-sm">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
-            </span>
-            👋 Hi There! I'm PHYO WAI AUNG
+        <span className="rotating-border inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-5 py-2 text-xs sm:text-sm font-medium text-emerald-300 backdrop-blur-sm">
+          <span className="relative flex h-2.5 w-2.5">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#e7961d]" />
           </span>
-        </motion.div>
+          👋 Hi There! I'm{" "}
+          <span className="font-black text-orange-400">PHYO WAI AUNG</span>
+        </span>
       </div>
 
       {/* Content grid */}

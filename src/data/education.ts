@@ -17,23 +17,24 @@ export type Education = {
 export const education: Education[] = [
   {
     id: "greenwich",
-    year: 2025,
+    year: 2024,
     level: 5,
 
     institution: "University of Greenwich",
     degree: "Bachelor of Computing (Hons)",
     location: "London, United Kingdom",
-    period: "2025 – 2026",
+    period: "2024 – 2025",
     logo: "/images/greenwich.png",
 
     headline:
       "Completed Bachelor of Computing with focus on modern software development and user experience design.",
 
     bullets: [
-      "Requirements Management & Enterprise Web Development",
-      "Human Computer Interaction & Design",
       "Mobile Design & Development",
+      "Enterprise Website Development",
+      "Human Computer Interaction & Design",
       "Software Project Management",
+      "Requirements Management",
     ],
   },
   {

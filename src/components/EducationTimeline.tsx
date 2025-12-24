@@ -12,9 +12,11 @@ export default function EducationTimeline({ items }: { items: Education[] }) {
             Education
           </span>
         </h2>
-        <p className="text-slate-400 mt-3 sm:mt-4 max-w-2xl mx-auto text-sm sm:text-base px-4">
-          Academic journey and educational achievements that shaped my technical
-          foundation.
+        <p className="mt-3 sm:mt-4 max-w-2xl mx-auto text-sm sm:text-base px-4">
+          <span className="inline-block bg-gradient-to-r from-blue-400/20 to-purple-400/20 backdrop-blur-sm border border-blue-400/30 rounded-2xl px-6 py-4 text-blue-200 leading-relaxed">
+            Academic journey and educational achievements that shaped my
+            technical foundation.
+          </span>
         </p>
       </header>
 

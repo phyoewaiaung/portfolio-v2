@@ -12,64 +12,128 @@ export type Certificate = {
   description: string;
   link: string;
   skills: string[];
+  image: string;
 };
 
 export const certificates: Certificate[] = [
   {
-    id: "frontend-react",
-    year: 2023,
-    level: 4,
-
-    title: "Frontend Development with React",
-    issuer: "freeCodeCamp",
-    location: "Online",
-    date: "2023",
-
-    description:
-      "Comprehensive React development course covering hooks, state management, and modern frontend patterns. ",
-
-    link: "https://www.freecodecamp.org/certification/your-cert-link",
-
-    skills: ["React", "JavaScript", "CSS", "HTML", "State Management"],
-  },
-  {
-    id: "fullstack",
+    id: "datastructures",
     year: 2022,
-    level: 3,
+    level: 5,
 
-    title: "Full-Stack Web Development",
+    title: "Data Structures and Algorithms",
     issuer: "Coursera",
     location: "Online",
     date: "2022",
 
     description:
-      "Complete full-stack development program covering frontend, backend, and deployment strategies.",
+      "Master fundamental data structures and algorithms essential for efficient problem-solving and software development.",
 
-    link: "https://coursera.org/verify/your-cert-link",
+    link: "https://coursera.org/verify/datastructures-cert",
 
-    skills: ["Node.js", "Express", "MongoDB", "React", "REST APIs"],
+    skills: [
+      "Data Structures",
+      "Algorithms",
+      "Problem Solving",
+      "Big O Notation",
+      "Python",
+    ],
+    image: "/images/certs/datastructure.png",
   },
   {
-    id: "typescript",
+    id: "web-development",
+    year: 2022,
+    level: 4,
+
+    title: "HTML, CSS, JavaScript for Web Developers",
+    issuer: "Coursera",
+    location: "Online",
+    date: "2022",
+
+    description:
+      "Comprehensive web development course covering modern HTML5, CSS3, and JavaScript ES6+ features and best practices.",
+
+    link: "https://coursera.org/verify/web-dev-cert",
+
+    skills: [
+      "HTML5",
+      "CSS3",
+      "JavaScript ES6+",
+      "Responsive Design",
+      "Web Standards",
+    ],
+    image: "/images/certs/html,css,js for web developers.jpeg",
+  },
+  {
+    id: "professional-certificate",
     year: 2023,
     level: 4,
 
-    title: "Advanced TypeScript",
-    issuer: "Udemy",
+    title: "Professional Web Developer",
+    issuer: "edX",
     location: "Online",
     date: "2023",
 
     description:
-      "Advanced TypeScript concepts including generics, decorators, and enterprise-level patterns.",
+      "Professional certificate program covering software engineering principles, design patterns, and industry best practices.",
 
-    link: "https://udemy.com/certificate/your-cert-link",
+    link: "https://edx.org/verify/professional-cert",
 
     skills: [
-      "TypeScript",
-      "Advanced Types",
-      "Generics",
-      "Decorators",
-      "Node.js",
+      "Software Engineering",
+      "Design Patterns",
+      "Testing",
+      "Agile",
+      "Git",
     ],
+    image: "/images/certs/professional.png",
+  },
+  {
+    id: "responsive-design",
+    year: 2022,
+    level: 3,
+
+    title: "Responsive Web Design",
+    issuer: "freeCodeCamp",
+    location: "Online",
+    date: "2022",
+
+    description:
+      "Learn modern responsive web design techniques using CSS Grid, Flexbox, and mobile-first design principles.",
+
+    link: "https://freecodecamp.org/certification/responsive-web-design",
+
+    skills: [
+      "Responsive Design",
+      "CSS Grid",
+      "Flexbox",
+      "Mobile-First",
+      "Media Queries",
+    ],
+    image: "/images/certs/responsive.png",
+  },
+  {
+    id: "rockstar-developer",
+    year: 2023,
+    level: 5,
+
+    title: "Rockstar Developer ",
+    issuer: "Tech Academy",
+    location: "Online",
+    date: "2023",
+
+    description:
+      "Advanced developer program focusing on full-stack development, cloud architecture, and modern software practices.",
+
+    link: "https://techacademy.com/verify/rockstar-cert",
+
+    skills: [
+      "Full-Stack Development",
+      "Cloud Architecture",
+      "DevOps",
+      "Microservices",
+      "React",
+    ],
+    image: "/images/certs/rockstar.png",
   },
 ];
