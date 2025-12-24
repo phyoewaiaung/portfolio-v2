@@ -118,7 +118,7 @@ export default function TSParticlesBackground() {
       />
 
       {/* Particles */}
-      <Particles id="tsparticles" init={particlesInit} options={options} />
+      <Particles id="tsparticles" options={options} />
     </>
   );
 }
