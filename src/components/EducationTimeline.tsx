@@ -41,44 +41,48 @@ function EducationCard({ item, index }: { item: Education; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
-      className="group rounded-2xl bg-slate-900/80 border border-slate-700/60 p-6 backdrop-blur-md shadow-xl hover:border-blue-500/40 transition-all duration-300"
+      className="group relative h-full"
     >
-      {/* Institution Logo and Name */}
-      <div className="flex items-center gap-3 mb-3">
-        <img
-          src={item.logo}
-          alt={`${item.institution} logo`}
-          width={64}
-          height={64}
-          className="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-contain"
-        />
-        <div>
-          <h3 className="text-xl md:text-2xl font-bold text-white mb-1 group-hover:text-blue-300 transition-colors">
-            {item.institution}
-          </h3>
-          <p className="text-blue-300 font-medium text-sm">{item.degree}</p>
+      <div className="h-full rounded-2xl bg-slate-900/80 border border-slate-700/60 backdrop-blur-md shadow-xl hover:border-blue-500/40 transition-all duration-300 hover:shadow-[0_20px_40px_-15px_rgba(59,130,246,0.25)] overflow-hidden">
+        {/* Institution Logo and Name */}
+        <div className="p-6">
+          <div className="flex items-center gap-3 mb-3">
+            <img
+              src={item.logo}
+              alt={`${item.institution} logo`}
+              width={64}
+              height={64}
+              className="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-contain transition-transform duration-300 group-hover:scale-110"
+            />
+            <div>
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-1 group-hover:text-blue-300 transition-colors">
+                {item.institution}
+              </h3>
+              <p className="text-blue-300 font-medium text-sm">{item.degree}</p>
+            </div>
+          </div>
+
+          {/* Period */}
+          <div className="text-sm sm:text-base font-bold text-slate-300 mb-4">
+            {item.period}
+          </div>
+
+          {/* Headline */}
+          <p className="text-slate-200 font-medium leading-relaxed text-sm mb-4">
+            {item.headline}
+          </p>
+
+          {/* Bullets */}
+          <ul className="space-y-2 text-slate-300 text-sm">
+            {item.bullets.map((b) => (
+              <li key={b} className="flex gap-3">
+                <span className="mt-1.5 h-1 w-1 rounded-full bg-blue-400 flex-shrink-0" />
+                <span>{b}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
-
-      {/* Period */}
-      <div className="text-sm sm:text-base font-bold text-slate-300 mb-4">
-        {item.period}
-      </div>
-
-      {/* Headline */}
-      <p className="text-slate-200 font-medium leading-relaxed text-sm mb-4">
-        {item.headline}
-      </p>
-
-      {/* Bullets */}
-      <ul className="space-y-2 text-slate-300 text-sm mb-4">
-        {item.bullets.map((b) => (
-          <li key={b} className="flex gap-3">
-            <span className="mt-1.5 h-1 w-1 rounded-full bg-blue-400 flex-shrink-0" />
-            <span>{b}</span>
-          </li>
-        ))}
-      </ul>
     </motion.article>
   );
 }

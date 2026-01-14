@@ -12,6 +12,10 @@ export default function Hero() {
       ?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const scrollToProjects = () => {
+    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section
       id="home"
@@ -89,6 +93,31 @@ export default function Hero() {
               forward-thinking environments.
             </motion.p>
 
+            {/* CTA Buttons */}
+            <motion.div
+              initial={reduce ? false : { opacity: 0, y: 20 }}
+              animate={reduce ? {} : { opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-8"
+            >
+              <motion.button
+                onClick={scrollToProjects}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-3 bg-gradient-to-r from-emerald-400 to-cyan-400 text-slate-900 rounded-full font-bold hover:shadow-lg hover:shadow-emerald-400/25 transition-all duration-300"
+              >
+                View Projects
+              </motion.button>
+              <motion.button
+                onClick={scrollToWork}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-3 bg-white/10 backdrop-blur-sm text-white rounded-full font-bold border border-white/20 hover:bg-white/20 transition-all duration-300"
+              >
+                View Experience
+              </motion.button>
+            </motion.div>
+
             {/* Tiny accent bullets for quick scanning */}
             {/* <motion.ul
               initial={reduce ? false : { opacity: 0, y: 20 }}
@@ -117,8 +146,8 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="order-1 md:order-2 pt-[7vh] md:pt-0"
         >
-          <div className="relative mx-auto w-full max-w-[520px]">
-            <div className="relative aspect-[5/4] overflow-hidden">
+          <div className="relative mx-auto w-full max-w-[600px]">
+            <div className="relative aspect-square overflow-hidden">
               <ProfileImage />
             </div>
           </div>

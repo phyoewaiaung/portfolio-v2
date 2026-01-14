@@ -89,6 +89,80 @@ function TimelineItem({ item, index }: { item: Experience; index: number }) {
 }
 
 /* ======================================================
+   Professional Skill Highlighting
+====================================================== */
+
+function getSkillStyle(skill: string) {
+  const skillLower = skill.toLowerCase();
+
+  // Frontend frameworks - emerald
+  if (["react", "vue", "angular", "svelte", "next.js"].includes(skillLower)) {
+    return "bg-gradient-to-r from-emerald-500/10 to-emerald-400/5 border-emerald-400/30 text-emerald-100 font-medium";
+  }
+
+  // Backend languages - blue
+  if (["python", "node.js", "php", "java", "c#", "go"].includes(skillLower)) {
+    return "bg-gradient-to-r from-blue-500/10 to-blue-400/5 border-blue-400/30 text-blue-100 font-medium";
+  }
+
+  // Languages/TypeScript - cyan
+  if (
+    ["typescript", "javascript", "html", "css", "sass"].includes(skillLower)
+  ) {
+    return "bg-gradient-to-r from-cyan-500/10 to-cyan-400/5 border-cyan-400/30 text-cyan-100 font-medium";
+  }
+
+  // Databases - purple
+  if (
+    ["redis", "mongodb", "postgresql", "mysql", "sqlite"].includes(skillLower)
+  ) {
+    return "bg-gradient-to-r from-purple-500/10 to-purple-400/5 border-purple-400/30 text-purple-100 font-medium";
+  }
+
+  // State management - indigo
+  if (["redux", "mobx", "zustand", "context api"].includes(skillLower)) {
+    return "bg-gradient-to-r from-indigo-500/10 to-indigo-400/5 border-indigo-400/30 text-indigo-100 font-medium";
+  }
+
+  // Tools/DevOps - orange
+  if (
+    ["docker", "kubernetes", "git", "github", "aws", "digitalocean"].includes(
+      skillLower,
+    )
+  ) {
+    return "bg-gradient-to-r from-orange-500/10 to-orange-400/5 border-orange-400/30 text-orange-100 font-medium";
+  }
+
+  // Testing - pink
+  if (
+    ["testing", "jest", "cypress", "playwright", "unit testing"].includes(
+      skillLower,
+    )
+  ) {
+    return "bg-gradient-to-r from-pink-500/10 to-pink-400/5 border-pink-400/30 text-pink-100 font-medium";
+  }
+
+  // UI/Visualization - teal
+  if (
+    ["canvas", "cytoscapejs", "three.js", "d3.js", "chart.js"].includes(
+      skillLower,
+    )
+  ) {
+    return "bg-gradient-to-r from-teal-500/10 to-teal-400/5 border-teal-400/30 text-teal-100 font-medium";
+  }
+
+  // Real-time/Networking - rose
+  if (
+    ["socket.io", "websocket", "api", "rest", "graphql"].includes(skillLower)
+  ) {
+    return "bg-gradient-to-r from-rose-500/10 to-rose-400/5 border-rose-400/30 text-rose-100 font-medium";
+  }
+
+  // Default professional style
+  return "bg-gradient-to-r from-slate-600/20 to-slate-500/10 border-slate-400/30 text-slate-100 font-medium";
+}
+
+/* ======================================================
    Card
 ====================================================== */
 
@@ -165,7 +239,7 @@ function ExperienceCard({ item }: { item: Experience }) {
         {item.tech.map((t) => (
           <span
             key={t}
-            className="px-3 py-1 text-xs rounded-full bg-slate-800/80 border border-slate-700 text-slate-300"
+            className={`px-3 py-1 text-xs rounded-full border transition-all duration-300 hover:scale-105 hover:shadow-lg ${getSkillStyle(t)}`}
           >
             {t}
           </span>

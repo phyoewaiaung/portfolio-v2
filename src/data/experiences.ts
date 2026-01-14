@@ -41,7 +41,16 @@ export const experiences: Experience[] = [
       "Implemented scalable UI using Atomic Design principles",
     ],
 
-    tech: ["TypeScript", "React", "Redux", "CytoscapeJS", "Canvas", "Docker"],
+    tech: [
+      "TypeScript",
+      "React",
+      "Python",
+      "Redis",
+      "Redux",
+      "Docker",
+      "CytoscapeJS",
+      "Canvas",
+    ],
   },
   {
     id: "brycen-se",
@@ -65,7 +74,7 @@ export const experiences: Experience[] = [
       "Worked in Agile/Scrum teams on production systems",
     ],
 
-    tech: ["React", "Laravel", "Redis", "Node.js", "Socket.IO", "DigitalOcean"],
+    tech: ["React", "PHP", "Redis", "Node.js", "Socket.IO", "DigitalOcean"],
   },
   {
     id: "intern",
@@ -89,6 +98,6 @@ export const experiences: Experience[] = [
       "Practiced Git workflows, unit testing, and coding standards",
     ],
 
-    tech: ["JavaScript", "React", "Git", "Testing"],
+    tech: ["JavaScript", "React", "PHP", "Git", "Testing"],
   },
 ];

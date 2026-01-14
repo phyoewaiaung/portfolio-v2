@@ -17,6 +17,54 @@ export type Certificate = {
 
 export const certificates: Certificate[] = [
   {
+    id: "rockstar-developer",
+    year: 2023,
+    level: 5,
+
+    title: "Rockstar Developer ",
+    issuer: "Tech Academy",
+    location: "Online",
+    date: "2023",
+
+    description:
+      "Advanced developer program focusing on full-stack development, cloud architecture, and modern software practices.",
+
+    link: "https://techacademy.com/verify/rockstar-cert",
+
+    skills: [
+      "Full-Stack Development",
+      "Cloud Architecture",
+      "DevOps",
+      "Microservices",
+      "React",
+    ],
+    image: "/images/certs/rockstar.png",
+  },
+  {
+    id: "professional-certificate",
+    year: 2023,
+    level: 4,
+
+    title: "Professional Web Developer",
+    issuer: "edX",
+    location: "Online",
+    date: "2023",
+
+    description:
+      "Professional certificate program covering software engineering principles, design patterns, and industry best practices.",
+
+    link: "https://edx.org/verify/professional-cert",
+
+    skills: [
+      "Software Engineering",
+      "Design Patterns",
+      "Testing",
+      "Agile",
+      "Git",
+    ],
+    image: "/images/certs/professional.png",
+  },
+  {
     id: "datastructures",
     year: 2022,
     level: 5,
@@ -65,30 +113,6 @@ export const certificates: Certificate[] = [
     image: "/images/certs/html,css,js for web developers.jpeg",
   },
   {
-    id: "professional-certificate",
-    year: 2023,
-    level: 4,
-
-    title: "Professional Web Developer",
-    issuer: "edX",
-    location: "Online",
-    date: "2023",
-
-    description:
-      "Professional certificate program covering software engineering principles, design patterns, and industry best practices.",
-
-    link: "https://edx.org/verify/professional-cert",
-
-    skills: [
-      "Software Engineering",
-      "Design Patterns",
-      "Testing",
-      "Agile",
-      "Git",
-    ],
-    image: "/images/certs/professional.png",
-  },
-  {
     id: "responsive-design",
     year: 2022,
     level: 3,
@@ -111,29 +135,5 @@ export const certificates: Certificate[] = [
       "Media Queries",
     ],
     image: "/images/certs/responsive.png",
-  },
-  {
-    id: "rockstar-developer",
-    year: 2023,
-    level: 5,
-
-    title: "Rockstar Developer ",
-    issuer: "Tech Academy",
-    location: "Online",
-    date: "2023",
-
-    description:
-      "Advanced developer program focusing on full-stack development, cloud architecture, and modern software practices.",
-
-    link: "https://techacademy.com/verify/rockstar-cert",
-
-    skills: [
-      "Full-Stack Development",
-      "Cloud Architecture",
-      "DevOps",
-      "Microservices",
-      "React",
-    ],
-    image: "/images/certs/rockstar.png",
   },
 ];
