@@ -152,7 +152,7 @@ export default function FloatingSocialIcons({
       opacity: 1,
       scale: 1,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 300,
         damping: 20,
         delay: index * 0.1,
