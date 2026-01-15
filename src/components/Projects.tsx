@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Projects() {
   const sectionRef = useRef<HTMLDivElement | null>(null);
-  const cardsRef = useRef<HTMLDivElement[]>([]);
+  const cardsRef = useRef<HTMLElement[]>([]);
   const numbersRef = useRef<HTMLDivElement[]>([]);
   const indicatorRef = useRef<HTMLDivElement>(null);
 
