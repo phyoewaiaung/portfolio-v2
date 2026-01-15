@@ -34,12 +34,12 @@ export default function ExperienceTimeline({ items }: { items: Experience[] }) {
       {/* Timeline */}
       <div className="relative">
         {/* Base line - left on mobile, center on desktop */}
-        <div className="absolute left-8 sm:left-1/2 top-0 h-full w-1 bg-slate-700/50 sm:-translate-x-1/2 rounded-full shadow-[0_0_20px_rgba(148,163,184,0.15)]" />
+        <div className="absolute left-6 sm:left-8 md:left-1/2 top-0 h-full w-0.5 sm:w-1 bg-slate-700/50 md:-translate-x-1/2 rounded-full shadow-[0_0_20px_rgba(148,163,184,0.15)]" />
 
         {/* Animated progress - left on mobile, center on desktop */}
         <motion.div
           style={{ height: progressHeight }}
-          className="absolute left-8 sm:left-1/2 top-0 w-2 bg-gradient-to-b from-emerald-400 via-cyan-400 to-indigo-400 sm:-translate-x-1/2 rounded-full origin-top shadow-[0_0_30px_rgba(52,211,153,0.4),0_0_60px_rgba(52,211,153,0.2)]"
+          className="absolute left-6 sm:left-8 md:left-1/2 top-0 w-1 sm:w-2 bg-gradient-to-b from-emerald-400 via-cyan-400 to-indigo-400 md:-translate-x-1/2 rounded-full origin-top shadow-[0_0_30px_rgba(52,211,153,0.4),0_0_60px_rgba(52,211,153,0.2)]"
         />
 
         <div className="space-y-12">
@@ -70,7 +70,7 @@ function TimelineItem({ item, index }: { item: Experience; index: number }) {
       }`}
     >
       {/* Year node - positioned left on mobile, center on desktop */}
-      <div className="absolute left-8 sm:left-1/2 md:left-1/2 -translate-x-1/2 sm:-translate-x-1/2 md:-translate-x-1/2 z-20">
+      <div className="absolute left-6 sm:left-8 md:left-1/2 -translate-x-1/2 sm:-translate-x-1/2 md:-translate-x-1/2 z-20">
         <div className="relative">
           <div className="w-12 h-12 sm:w-14 sm:h-16 md:w-16 md:h-16 rounded-full bg-slate-950 border-2 border-emerald-400/80 flex items-center justify-center font-extrabold text-emerald-300 text-sm sm:text-base md:text-xl shadow-[0_0_30px_rgba(52,211,153,0.3),0_0_60px_rgba(52,211,153,0.15),inset_0_0_15px_rgba(52,211,153,0.1)] backdrop-blur-sm">
             {item.year}
@@ -81,7 +81,7 @@ function TimelineItem({ item, index }: { item: Experience; index: number }) {
       </div>
 
       {/* Card */}
-      <div className="w-full md:w-[44%] ml-16 sm:ml-0">
+      <div className="w-full md:w-[44%] ml-12 sm:ml-16 md:ml-0">
         <ExperienceCard item={item} />
       </div>
     </motion.div>

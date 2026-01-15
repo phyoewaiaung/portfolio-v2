@@ -9,11 +9,11 @@ export default function ProfileImage() {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="relative w-full h-[650px] flex items-center justify-center"
+      className="relative w-full h-[450px] sm:h-[550px] md:h-[650px] flex items-start justify-center pt-5 sm:pt-0 md:pt-0"
     >
-      <div className="relative group">
+      <div className="relative group self-start">
         {/* Frame with effects inside border */}
-        <div className="relative w-[450px] h-[450px] md:w-[500px] md:h-[500px] lg:w-[550px] lg:h-[550px]">
+        <div className="relative w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] md:w-[450px] md:h-[450px] lg:w-[500px] lg:h-[500px] xl:w-[550px] xl:h-[550px]">
           {/* Main image container */}
           <motion.div
             whileHover={{ scale: 1.02 }}

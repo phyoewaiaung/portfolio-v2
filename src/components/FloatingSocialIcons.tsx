@@ -293,7 +293,7 @@ export function FloatingContactButton() {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.98 }}
       onClick={handleContact}
-      className="fixed bottom-8 right-4 z-50 md:right-8 group"
+      className="fixed bottom-20 right-4 z-50 md:bottom-8 md:right-8 group"
       title="Contact Me"
     >
       <div className="relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-full p-3 md:p-4 text-white/80 shadow-lg hover:shadow-xl hover:bg-white/15 transition-all duration-300">

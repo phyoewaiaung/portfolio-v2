@@ -94,7 +94,7 @@ export default function Hero() {
             </motion.p>
 
             {/* CTA Buttons */}
-            <motion.div
+            {/* <motion.div
               initial={reduce ? false : { opacity: 0, y: 20 }}
               animate={reduce ? {} : { opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
@@ -116,7 +116,7 @@ export default function Hero() {
               >
                 View Experience
               </motion.button>
-            </motion.div>
+            </motion.div> */}
 
             {/* Tiny accent bullets for quick scanning */}
             {/* <motion.ul
