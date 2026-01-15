@@ -65,6 +65,33 @@ export const certificates: Certificate[] = [
     image: "/images/certs/professional.png",
   },
   {
+    id: "frontend-internship",
+    year: 2022,
+    level: 1,
+
+    title: "Frontend Development Internship",
+    issuer: "Brycen Myanmar Co., Ltd.",
+    location: "Myanmar",
+    date: "2022",
+
+    description:
+      "Completed intensive frontend development internship program focusing on JavaScript, React, and modern web development practices.",
+
+    link: "https://www.brycenmyanmar.com.mm/",
+
+    skills: [
+      "JavaScript",
+      "React",
+      "PHP",
+      "Git",
+      "Testing",
+      "Frontend Fundamentals",
+      "Security Basics",
+      "Networking Concepts",
+    ],
+    image: "/images/certs/intern.png",
+  },
+  {
     id: "datastructures",
     year: 2022,
     level: 5,
