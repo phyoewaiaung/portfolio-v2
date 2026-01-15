@@ -1,13 +1,15 @@
-import LenisProvider from "./LenisProvider";
+import LenisProviderWithControl from "@/context/LenisContext";
 import "./globals.css";
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body>
-        <LenisProvider>
-          {children}
-        </LenisProvider>
+        <LenisProviderWithControl>{children}</LenisProviderWithControl>
       </body>
     </html>
   );

@@ -21,7 +21,7 @@ export default function EducationTimeline({ items }: { items: Education[] }) {
       </header>
 
       {/* Horizontal Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8">
         {items.map((item, index) => (
           <EducationCard key={item.id} item={item} index={index} />
         ))}

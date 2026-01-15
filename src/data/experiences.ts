@@ -21,7 +21,7 @@ export type Experience = {
 export const experiences: Experience[] = [
   {
     id: "xenoptics",
-    year: 2024,
+    year: 2026,
     level: 5,
 
     company: "Xenoptics Co., Ltd.",

@@ -21,7 +21,7 @@ export default function CertificatesGrid({ items }: { items: Certificate[] }) {
       </header>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
         {items.map((item, index) => (
           <CertificateCard key={item.id} item={item} index={index} />
         ))}

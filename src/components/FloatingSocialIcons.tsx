@@ -339,7 +339,19 @@ export function FloatingDownloadCV() {
         </div>
 
         {/* Icon */}
-        <Download className="relative w-5 h-5 md:w-6 md:h-6 text-blue-400 transition-colors duration-300 group-hover:text-blue-300" />
+        <svg
+          className="relative w-5 h-5 md:w-6 md:h-6 text-blue-400 transition-colors duration-300 group-hover:text-blue-300 group-hover:animate-bounce"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"
+          />
+        </svg>
 
         {/* Tooltip on top */}
         <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-gray-900/95 backdrop-blur-md text-white text-xs font-medium px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none border border-blue-400/30 shadow-lg z-50">

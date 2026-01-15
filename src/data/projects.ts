@@ -26,4 +26,24 @@ Online booking system for hotels and services with secure payments, scheduling, 
     link: "https://github.com/yourusername/booking-platform",
     image: "/images/projects/booking-platform.png",
   },
+  {
+    title: "E-Commerce Store",
+    description: `
+Modern e-commerce platform with real-time inventory management, secure checkout process, and responsive design. 
+Features include product search, shopping cart, and order tracking.`,
+    tech: ["Next.js", "Stripe", "PostgreSQL", "Tailwind CSS"],
+    link: "https://github.com/yourusername/ecommerce-store",
+    demo: "https://yourprojectdemo.vercel.app",
+    image: "/images/projects/ecommerce-store.png",
+  },
+  {
+    title: "Task Management App",
+    description: `
+Collaborative task management application with real-time updates, team collaboration features, 
+and progress tracking. Includes drag-and-drop interface and deadline notifications.`,
+    tech: ["React", "Firebase", "Material-UI", "Redux"],
+    link: "https://github.com/yourusername/task-manager",
+    demo: "https://yourprojectdemo.vercel.app",
+    image: "/images/projects/task-manager.png",
+  },
 ];

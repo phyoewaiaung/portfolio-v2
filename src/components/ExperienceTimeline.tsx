@@ -72,7 +72,7 @@ function TimelineItem({ item, index }: { item: Experience; index: number }) {
       {/* Year node - positioned left on mobile, center on desktop */}
       <div className="absolute left-6 sm:left-8 md:left-1/2 -translate-x-1/2 sm:-translate-x-1/2 md:-translate-x-1/2 z-20">
         <div className="relative">
-          <div className="w-12 h-12 sm:w-14 sm:h-16 md:w-16 md:h-16 rounded-full bg-slate-950 border-2 border-emerald-400/80 flex items-center justify-center font-extrabold text-emerald-300 text-sm sm:text-base md:text-xl shadow-[0_0_30px_rgba(52,211,153,0.3),0_0_60px_rgba(52,211,153,0.15),inset_0_0_15px_rgba(52,211,153,0.1)] backdrop-blur-sm">
+          <div className="w-12 h-12 sm:w-14 sm:h-16 md:w-16 md:h-16 rounded-full bg-slate-950 border-2 border-emerald-400/80 flex items-center justify-center font-extrabold text-emerald-300 text-base sm:text-lg md:text-2xl shadow-[0_0_30px_rgba(52,211,153,0.3),0_0_60px_rgba(52,211,153,0.15),inset_0_0_15px_rgba(52,211,153,0.1)] backdrop-blur-sm">
             {item.year}
           </div>
           {/* Inner glow ring */}

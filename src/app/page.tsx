@@ -6,6 +6,7 @@ import CertificatesGrid from "@/components/CertificatesGrid";
 import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import AnimatedBackground from "@/components/AnimatedBackground";
+import Footer from "@/components/Footer";
 import FloatingSocialIcons, {
   FloatingContactButton,
   FloatingDownloadCV,
@@ -50,7 +51,7 @@ export default function Home() {
           },
           {
             iconName: "MessageCircle",
-            href: "https://wa.me/+9509974282980",
+            href: "https://wa.me/+950997428290",
             label: "WhatsApp",
             color: "hover:bg-green-500",
           },
@@ -63,10 +64,11 @@ export default function Home() {
       <Hero />
       <ExperienceTimeline items={experiences} />
       <EducationTimeline items={education} />
-      <CertificatesGrid items={certificates} />
       <Projects />
-      {/* <Skills />
-      <Contact /> */}
+      <CertificatesGrid items={certificates} />
+      {/* <Skills /> */}
+      {/* <Contact /> */}
+      <Footer />
     </main>
   );
 }
