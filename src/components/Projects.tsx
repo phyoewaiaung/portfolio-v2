@@ -164,95 +164,85 @@ export default function Projects() {
                     {String(index + 1).padStart(2, "0")}
                   </span>
                 </div>
+                <div className="lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0">
+                  <article
+                    ref={(el) => {
+                      if (el) cardsRef.current[index] = el;
+                    }}
+                    className="w-full bg-slate-800/50 backdrop-blur-md
+                               rounded-xl sm:rounded-2xl overflow-hidden
+                               border border-white/10
+                               hover:border-emerald-400/40
+                               hover:shadow-xl hover:shadow-emerald-400/20
+                               transition-all duration-300
+                               hover:scale-[1.01] lg:hover:scale-[1.02]"
+                  >
+                    <div className="flex flex-col md:flex-row">
+                      {/* IMAGE - LEFT SIDE (60%) */}
+                      <div className="w-full md:w-3/5 h-80 xs:h-96 sm:h-[28rem] md:h-auto lg:h-80 xl:h-[32rem] relative overflow-hidden">
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 70vw"
+                          priority={index === 0}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                      </div>
 
-                <article
-                  ref={(el) => {
-                    if (el) cardsRef.current[index] = el;
-                  }}
-                  className="w-full bg-slate-800/50 backdrop-blur-md
-                             rounded-xl sm:rounded-2xl overflow-hidden
-                             border border-white/10
-                             hover:border-emerald-400/40
-                             hover:shadow-xl hover:shadow-emerald-400/20
-                             transition-all duration-300
-                             hover:scale-[1.01] lg:hover:scale-[1.02]"
-                >
-                  {/* IMAGE */}
-                  <div className="relative h-48 xs:h-56 sm:h-64 md:h-72 lg:h-48 xl:h-72 w-full overflow-hidden">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 70vw"
-                      priority={index === 0}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                  </div>
+                      {/* CONTENT - RIGHT SIDE (40%) */}
+                      <div className="w-full md:w-2/5 p-4 sm:p-5 md:p-6 lg:p-4 xl:p-6 flex flex-col justify-between">
+                        <div>
+                          <h3 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-xl xl:text-2xl font-extrabold text-white mb-2 sm:mb-2.5 lg:mb-2 leading-tight">
+                            {project.title}
+                          </h3>
 
-                  {/* CONTENT */}
-                  <div className="p-4 sm:p-5 md:p-6 lg:p-4 xl:p-6">
-                    <h3 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-xl xl:text-2xl font-extrabold text-white mb-2 sm:mb-2.5 lg:mb-2 leading-tight">
-                      {project.title}
-                    </h3>
+                          <p className="text-slate-300 text-sm sm:text-base md:text-base lg:text-sm xl:text-base leading-relaxed mb-3 sm:mb-4 lg:mb-3 xl:mb-4">
+                            {project.description}
+                          </p>
 
-                    <p className="text-slate-300 text-sm sm:text-base md:text-base lg:text-sm xl:text-base leading-relaxed mb-3 sm:mb-4 lg:mb-3 xl:mb-4">
-                      {project.description}
-                    </p>
+                          {/* TECH STACK */}
+                          <div className="flex flex-wrap gap-1.5 sm:gap-2 lg:gap-1.5 mb-3 sm:mb-4 lg:mb-3 xl:mb-4">
+                            {project.tech.map((tech) => (
+                              <span
+                                key={tech}
+                                className="px-2 py-0.5 sm:px-2.5 sm:py-1 lg:px-2 lg:py-0.5
+                                         text-xs sm:text-xs lg:text-xs xl:text-sm
+                                         bg-emerald-400/10 text-emerald-400
+                                         rounded-md sm:rounded-lg border border-emerald-400/20
+                                         font-medium"
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
 
-                    {/* TECH STACK */}
-                    <div className="flex flex-wrap gap-1.5 sm:gap-2 lg:gap-1.5 mb-3 sm:mb-4 lg:mb-3 xl:mb-4">
-                      {project.tech.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-2 py-0.5 sm:px-2.5 sm:py-1 lg:px-2 lg:py-0.5
-                                     text-xs sm:text-xs lg:text-xs xl:text-sm
-                                     bg-emerald-400/10 text-emerald-400
-                                     rounded-md sm:rounded-lg border border-emerald-400/20
-                                     font-medium"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                        {/* ACTIONS */}
+                        <div className="flex flex-col xs:flex-row gap-2 sm:gap-2.5 lg:gap-2">
+                          {project.demo && (
+                            <a
+                              href={project.demo}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="px-4 py-2 sm:px-4 sm:py-2.5 lg:px-4 lg:py-2
+                                         text-sm sm:text-sm lg:text-sm xl:text-base
+                                         bg-emerald-400 text-slate-900
+                                         rounded-lg font-bold
+                                         hover:bg-emerald-300 active:bg-emerald-500
+                                         transition-all duration-200
+                                         w-full xs:w-auto text-center
+                                         shadow-lg shadow-emerald-400/25"
+                            >
+                              Live Demo
+                            </a>
+                          )}
+                        </div>
+                      </div>
                     </div>
-
-                    {/* ACTIONS */}
-                    <div className="flex flex-col xs:flex-row gap-2 sm:gap-2.5 lg:gap-2">
-                      {project.demo && (
-                        <a
-                          href={project.demo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="px-4 py-2 sm:px-4 sm:py-2.5 lg:px-4 lg:py-2
-                                     text-sm sm:text-sm lg:text-sm xl:text-base
-                                     bg-emerald-400 text-slate-900
-                                     rounded-lg font-bold
-                                     hover:bg-emerald-300 active:bg-emerald-500
-                                     transition-all duration-200
-                                     w-full xs:w-auto text-center
-                                     shadow-lg shadow-emerald-400/25"
-                        >
-                          Live Demo
-                        </a>
-                      )}
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-4 py-2 sm:px-4 sm:py-2.5 lg:px-4 lg:py-2
-                                   text-sm sm:text-sm lg:text-sm xl:text-base
-                                   bg-white/10 text-white
-                                   rounded-lg font-bold
-                                   border border-white/20
-                                   hover:bg-white/20 active:bg-white/30
-                                   transition-all duration-200
-                                   w-full xs:w-auto text-center"
-                      >
-                        View Code
-                      </a>
-                    </div>
-                  </div>
-                </article>
+                  </article>
+                </div>
               </div>
             ))}
           </div>

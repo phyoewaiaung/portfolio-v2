@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useRef, useEffect } from "react";
 import Image from "next/image";
-import { Mail, MessageCircle, Download } from "lucide-react";
+import { Mail, MessageCircle, Download, Coffee } from "lucide-react";
 
 interface ContactLink {
   icon: React.ReactNode;
@@ -179,11 +179,16 @@ export default function Footer() {
       </div>
 
       <div className="text-center pt-6 border-t border-slate-800">
-        <p className="text-slate-500 text-sm">
-          2026 phyowaiaung. Built with
-          <span className="text-emerald-400"> passion</span> and
-          <span className="text-cyan-400"> creativity</span>.
-        </p>
+        <div className="flex items-center justify-center gap-2 text-slate-500 text-sm">
+          <span>2026 phyowaiaung. Built with</span>
+          <span className="text-emerald-400">passion</span>
+          <span>,</span>
+          <span className="text-cyan-400">creativity</span>
+          <span>and</span>
+          <span className="text-yellow-400">coffee</span>
+          <Coffee className="w-4 h-4 text-yellow-400" />
+          <span>.</span>
+        </div>
       </div>
     </footer>
   );

@@ -1,12 +1,12 @@
 export const projects = [
   {
-    title: "Network Management Dashboard",
+    title: "DevNexus",
     description: `
 An interactive real-time monitoring dashboard for machine networks. 
 Visualizes nodes, connections, and metrics using Cytoscape.js and WebSocket feeds.`,
     tech: ["React", "TypeScript", "Cytoscape.js", "Redux"],
     link: "https://github.com/yourusername/network-dashboard",
-    demo: "https://yourprojectdemo.vercel.app",
+    demo: "https://devnexus-ui-1.onrender.com/login",
     image: "/images/projects/network-dashboard.png",
   },
   {
