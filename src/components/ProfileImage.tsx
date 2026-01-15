@@ -22,10 +22,10 @@ export default function ProfileImage() {
           >
             {/* Profile image */}
             <Image
-              src="/images/profile2.png"
+              src="/images/phyo.png"
               alt="Profile"
-              width={700}
-              height={700}
+              width={400}
+              height={400}
               className="w-full h-full object-contain scale-120"
               priority
             />
@@ -77,27 +77,6 @@ export default function ProfileImage() {
               borderRadius: "50%",
             }}
           />
-
-          {/* Gradient particles inside */}
-          {[0, 90, 180, 270].map((rotation, i) => (
-            <motion.div
-              key={i}
-              className="absolute top-1/2 left-1/2 w-2 h-2 rounded-full bg-gradient-to-r from-emerald-400 to-cyan-400"
-              style={{
-                transform: `translate(-50%, -50%) rotate(${rotation}deg) translateY(-60px)`,
-              }}
-              animate={{
-                scale: [0, 1.2, 0],
-                opacity: [0, 0.7, 0],
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                delay: i * 0.4,
-                ease: "easeInOut",
-              }}
-            />
-          ))}
         </div>
       </div>
     </motion.div>
