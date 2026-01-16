@@ -178,16 +178,27 @@ export default function Projects() {
                                hover:scale-[1.01] lg:hover:scale-[1.02]"
                   >
                     <div className="flex flex-col md:flex-row">
-                      {/* IMAGE - LEFT SIDE (60%) */}
+                      {/* IMAGE/VIDEO - LEFT SIDE (60%) */}
                       <div className="w-full md:w-3/5 h-80 xs:h-96 sm:h-[28rem] md:h-auto lg:h-80 xl:h-[32rem] relative overflow-hidden">
-                        <Image
-                          src={project.image}
-                          alt={project.title}
-                          fill
-                          className="object-cover"
-                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 70vw"
-                          priority={index === 0}
-                        />
+                        {project.video ? (
+                          <video
+                            src={project.video}
+                            muted
+                            loop
+                            playsInline
+                            autoPlay
+                            className="absolute inset-0 w-full h-full object-cover"
+                          />
+                        ) : (
+                          <Image
+                            src={project.image}
+                            alt={project.title}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 70vw"
+                            priority={index === 0}
+                          />
+                        )}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                       </div>
 
