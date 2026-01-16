@@ -16,7 +16,7 @@ The developer community platform for sharing code, ideas, and opportunities betw
     link: "https://github.com/yourusername/network-dashboard",
     demo: "https://devnexus-ui-1.onrender.com",
     image: "/images/projects/devnexus.png",
-    video: "/videos/devnexus.mp4",
+    video: "/videos/demo-dev.mp4",
   },
   {
     title: "HR Management System",
