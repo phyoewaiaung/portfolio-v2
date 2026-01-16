@@ -30,9 +30,9 @@ export const education: Education[] = [
       "Completed Bachelor of Computing with focus on modern software development and user experience design.",
 
     bullets: [
-      "Mobile Design & Development",
-      "Enterprise Website Development",
-      "Human Computer Interaction & Design",
+      "Mobile Design & Development (Kotlin)",
+      "Enterprise Website Development (Next.js,Python)",
+      "Human Computer Interaction & Design (AxureRP)",
       "Software Project Management",
       "Requirements Management",
     ],

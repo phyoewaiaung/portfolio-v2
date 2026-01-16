@@ -16,7 +16,7 @@ export default function ProfileImage() {
         <div className="relative w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] md:w-[450px] md:h-[450px] lg:w-[500px] lg:h-[500px] xl:w-[550px] xl:h-[550px]">
           {/* Main image container */}
           <motion.div
-            whileHover={{ scale: 1.02 }}
+            // whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.4 }}
             className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/10"
           >

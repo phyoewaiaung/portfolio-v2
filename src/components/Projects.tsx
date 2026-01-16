@@ -179,35 +179,29 @@ export default function Projects() {
                   >
                     <div className="flex flex-col md:flex-row">
                       {/* IMAGE/VIDEO - LEFT SIDE (60%) */}
-                      <div className="w-full md:w-3/5 h-80 xs:h-96 sm:h-[28rem] md:h-auto lg:h-80 xl:h-[32rem] relative overflow-hidden">
+                      <div className="w-full md:w-3/5 h-80 xs:h-96 sm:h-[28rem] md:h-auto lg:h-80 xl:h-[32rem] relative overflow-hidden bg-slate-900">
                         {project.video ? (
                           <video
                             src={project.video}
+                            autoPlay
                             muted
                             loop
                             playsInline
-                            autoPlay
-                            controls
-                            onError={(e) => {
-                              console.error("Video error:", e);
-                              console.error("Video src:", project.video);
-                            }}
-                            onLoadStart={() =>
-                              console.log("Video load start:", project.video)
-                            }
-                            className="absolute inset-0 w-full h-full object-cover"
+                            className="w-full h-full object-cover"
                           />
                         ) : (
-                          <Image
-                            src={project.image}
-                            alt={project.title}
-                            fill
-                            className="object-cover"
-                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 70vw"
-                            priority={index === 0}
-                          />
+                          <>
+                            <Image
+                              src={project.image}
+                              alt={project.title}
+                              fill
+                              className="object-cover"
+                              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 70vw"
+                              priority={index === 0}
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                          </>
                         )}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                       </div>
 
                       {/* CONTENT - RIGHT SIDE (40%) */}

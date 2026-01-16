@@ -19,7 +19,7 @@ export default function ExperienceTimeline({ items }: { items: Experience[] }) {
       <header className="text-center mb-16">
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black">
           <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-            Experience
+            My Journey
           </span>
         </h2>
         <p className="mt-3 sm:mt-4 max-w-2xl mx-auto text-sm sm:text-base px-4">
@@ -168,7 +168,7 @@ function getSkillStyle(skill: string) {
 
 function ExperienceCard({ item }: { item: Experience }) {
   return (
-    <article className="rounded-2xl bg-slate-900/80 border border-slate-700/60 p-4 sm:p-5 md:p-6 backdrop-blur-md shadow-xl hover:border-emerald-500/40 transition-colors">
+    <article className="group rounded-2xl bg-slate-900/80 border border-slate-700/60 p-4 sm:p-5 md:p-6 backdrop-blur-md shadow-xl hover:border-emerald-500/40 transition-colors">
       {/* Company Logo and Name */}
       <div className="flex items-center gap-3 mb-2 sm:mb-3">
         <img
@@ -176,7 +176,7 @@ function ExperienceCard({ item }: { item: Experience }) {
           alt={`${item.company} logo`}
           width={64}
           height={64}
-          className="w-14 border border-slate-600 h-14 sm:w-16 sm:h-16 bg-white p-1 rounded-full object-contain"
+          className="w-14 border border-slate-600 h-14 sm:w-16 sm:h-16 bg-white p-1 rounded-full object-contain transition-transform duration-300 group-hover:scale-110"
         />
         <div>
           <a

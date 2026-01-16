@@ -124,11 +124,11 @@ export default function Footer() {
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4">
                 <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent bg-size-200 bg-pos-0 animate-gradient">
-                  Contact Me
+                  Let&apos;s Connect
                 </span>
               </h2>
               <p className="text-slate-300 text-lg max-w-3xl mx-auto leading-relaxed">
-                Thank you for visiting my portfolio. I'm always excited to
+                Thank you for visiting my portfolio. I&apos;m always excited to
                 <span className="text-emerald-400 font-semibold">
                   {" "}
                   collaborate
@@ -180,7 +180,10 @@ export default function Footer() {
 
       <div className="text-center pt-6 border-t border-slate-800">
         <div className="flex items-center justify-center gap-2 text-slate-500 text-sm">
-          <span>2026 phyowaiaung. Built with</span>
+          <span>2026 phyowaiaung.</span>
+        </div>
+        <div className="flex items-center justify-center gap-2 text-slate-500 text-sm">
+          <span>Built with</span>
           <span className="text-emerald-400">passion</span>
           <span>,</span>
           <span className="text-cyan-400">creativity</span>

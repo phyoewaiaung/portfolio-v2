@@ -9,7 +9,7 @@ export default function EducationTimeline({ items }: { items: Education[] }) {
       <header className="text-center mb-16">
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black">
           <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Education
+            Academic Background
           </span>
         </h2>
         <p className="mt-3 sm:mt-4 max-w-2xl mx-auto text-sm sm:text-base px-4">

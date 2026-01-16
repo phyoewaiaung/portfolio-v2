@@ -72,70 +72,56 @@ export default function Hero() {
 
           {/* Improved description UI */}
           <div className="mt-6 space-y-4">
-            <motion.p
-              initial={reduce ? false : { opacity: 0, y: 20 }}
-              animate={reduce ? {} : { opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="text-justify font-bold font-[Gill Sans] mb-4 text-base md:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0"
+            <motion.div
+              initial={reduce ? false : { opacity: 0, x: -50 }}
+              animate={reduce ? {} : { opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              className="relative overflow-hidden"
             >
-              Experienced Software Engineer with a proven track record of
-              developing seamless, high-performance applications and delivering
-              impactful digital solutions.
-            </motion.p>
+              <div className="relative">
+                <motion.div
+                  initial={{ width: "0%" }}
+                  animate={{ width: "100%" }}
+                  transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
+                  className="h-0.5 bg-gradient-to-r from-emerald-400 via-cyan-400 to-emerald-400 origin-left"
+                />
+                <motion.p
+                  initial={reduce ? false : { opacity: 0, y: 30 }}
+                  animate={reduce ? {} : { opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+                  className="font-['Inter'] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-emerald-200 to-cyan-200 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto md:mx-0"
+                >
+                  Experienced Software Engineer with a proven track record of
+                  developing seamless, high-performance applications and
+                  delivering impactful digital solutions.
+                </motion.p>
+              </div>
+            </motion.div>
 
-            <motion.p
-              initial={reduce ? false : { opacity: 0, y: 20 }}
-              animate={reduce ? {} : { opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.25 }}
-              className="text-justify font-bold font-[Gill Sans] mb-4 text-base md:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0"
+            <motion.div
+              initial={reduce ? false : { opacity: 0, x: 50 }}
+              animate={reduce ? {} : { opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+              className="relative overflow-hidden"
             >
-              Passionate about contributing to innovative projects in dynamic,
-              forward-thinking environments.
-            </motion.p>
-
-            {/* CTA Buttons */}
-            {/* <motion.div
-              initial={reduce ? false : { opacity: 0, y: 20 }}
-              animate={reduce ? {} : { opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-8"
-            >
-              <motion.button
-                onClick={scrollToProjects}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 bg-gradient-to-r from-emerald-400 to-cyan-400 text-slate-900 rounded-full font-bold hover:shadow-lg hover:shadow-emerald-400/25 transition-all duration-300"
-              >
-                View Projects
-              </motion.button>
-              <motion.button
-                onClick={scrollToWork}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 bg-white/10 backdrop-blur-sm text-white rounded-full font-bold border border-white/20 hover:bg-white/20 transition-all duration-300"
-              >
-                View Experience
-              </motion.button>
-            </motion.div> */}
-
-            {/* Tiny accent bullets for quick scanning */}
-            {/* <motion.ul
-              initial={reduce ? false : { opacity: 0, y: 20 }}
-              animate={reduce ? {} : { opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.25 }}
-              className="mx-auto md:mx-0 max-w-2xl grid gap-2 sm:grid-cols-2 text-slate-300 text-sm">
-              {[
-                "Outcome-driven & detail-oriented",
-                "Clear communication & ownership",
-                "User-first product mindset",
-                "Performance & DX focused",
-              ].map((item) => (
-                <li key={item} className="flex items-center gap-2 border bg-transparent border-blue-100 border-opacity-10 rounded w-fit px-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-gradient-to-r from-emerald-400 to-teal-400" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </motion.ul> */}
+              <div className="relative">
+                <motion.div
+                  initial={{ width: "0%" }}
+                  animate={{ width: "100%" }}
+                  transition={{ duration: 1.2, delay: 0.7, ease: "easeOut" }}
+                  className="h-0.5 bg-gradient-to-r from-cyan-400 via-emerald-400 to-cyan-400 origin-right"
+                />
+                <motion.p
+                  initial={reduce ? false : { opacity: 0, y: 30 }}
+                  animate={reduce ? {} : { opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
+                  className="font-['Inter'] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 to-emerald-200 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto md:mx-0"
+                >
+                  Passionate about contributing to innovative projects in
+                  dynamic, forward-thinking environments.
+                </motion.p>
+              </div>
+            </motion.div>
           </div>
         </div>
 
