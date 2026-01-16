@@ -187,6 +187,14 @@ export default function Projects() {
                             loop
                             playsInline
                             autoPlay
+                            controls
+                            onError={(e) => {
+                              console.error("Video error:", e);
+                              console.error("Video src:", project.video);
+                            }}
+                            onLoadStart={() =>
+                              console.log("Video load start:", project.video)
+                            }
                             className="absolute inset-0 w-full h-full object-cover"
                           />
                         ) : (
