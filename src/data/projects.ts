@@ -19,13 +19,14 @@ The developer community platform for sharing code, ideas, and opportunities betw
     video: "/videos/demo-dev.mp4",
   },
   {
-    title: "HR Management System",
+    title: "M-Hike",
     description: `
-Full-stack web application for employee registration, leave tracking, and reports. 
-Developed with Laravel backend and React frontend.`,
-    tech: ["Laravel", "React", "MySQL", "TypeScript"],
-    link: "https://github.com/yourusername/hr-system",
-    image: "/images/projects/hr-system.png",
+Hybrid mobile application for hiking enthusiasts to plan trips, take notes, record observations, 
+and check weather conditions. Built with React Native and Expo for cross-platform compatibility.`,
+    tech: ["React Native", "Expo", "TypeScript", "Redux", "Weather API"],
+    link: "https://github.com/phyoewaiaung/M-Hike-Hybrid",
+    demo: "https://expo.dev/accounts/pxyoe/projects/M-Hike/builds/23ddb26e-e78f-44e2-b670-78ca53870709",
+    image: "/images/mhike-dashboard.jpg",
   },
   {
     title: "Booking Platform",
