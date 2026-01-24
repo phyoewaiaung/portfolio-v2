@@ -23,7 +23,14 @@ The developer community platform for sharing code, ideas, and opportunities betw
     description: `
 Hybrid mobile application for hiking enthusiasts to plan trips, take notes, record observations, 
 and check weather conditions. Built with React Native and Expo for cross-platform compatibility.`,
-    tech: ["React Native", "Expo", "TypeScript", "Redux", "Weather API"],
+    tech: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "Redux",
+      "SQLite",
+      "Weather API",
+    ],
     link: "https://github.com/phyoewaiaung/M-Hike-Hybrid",
     demo: "https://expo.dev/accounts/pxyoe/projects/M-Hike/builds/23ddb26e-e78f-44e2-b670-78ca53870709",
     image: "/images/mhike-dashboard.jpg",
