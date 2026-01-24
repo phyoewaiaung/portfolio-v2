@@ -196,16 +196,18 @@ export default function Projects() {
                               alt={project.title}
                               fill
                               className={`${
-                                project.title === "M-Hike"
+                                project.title === "M-Hike" ||
+                                project.title === "React Advanced Guides"
                                   ? "object-contain p-4"
                                   : "object-cover"
                               }`}
                               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 70vw"
                               priority={index === 0}
                             />
-                            {project.title !== "M-Hike" && (
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                            )}
+                            {project.title !== "M-Hike" &&
+                              project.title !== "React Advanced Guides" && (
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                              )}
                           </>
                         )}
                       </div>

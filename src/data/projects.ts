@@ -36,22 +36,34 @@ and check weather conditions. Built with React Native and Expo for cross-platfor
     image: "/images/mhike-dashboard.jpg",
   },
   {
-    title: "Booking Platform",
+    title: "SGMYANMAR Logistics",
     description: `
-Online booking system for hotels and services with secure payments, scheduling, and admin dashboards.`,
-    tech: ["Vue.js", "Node.js", "MongoDB"],
-    link: "https://github.com/yourusername/booking-platform",
-    demo: "https://booking-demo.vercel.app",
-    image: "/images/projects/booking-platform.png",
+Freelance logistics application connecting Singapore and Myanmar shipping services. 
+Features real-time tracking, booking management, and comprehensive logistics solutions for cross-border freight.`,
+    tech: ["Laravel", "Inertia React", "TypeScript", "MySQL"],
+    link: "https://github.com/phyoewaiaung/prod_sgmm",
+    demo: "https://prodsgmm--phyowaiaungpxyo.replit.app/",
+    image: "/images/sgmyanmar.png",
   },
   {
-    title: "E-Commerce Store",
+    title: "React Advanced Guides",
     description: `
-Modern e-commerce platform with real-time inventory management, secure checkout process, and responsive design. 
-Features include product search, shopping cart, and order tracking.`,
-    tech: ["Next.js", "Stripe", "PostgreSQL", "Tailwind CSS"],
-    link: "https://github.com/yourusername/ecommerce-store",
-    image: "/images/projects/ecommerce-store.png",
+Comprehensive learning project created to understand deep React concepts and advanced patterns. 
+Features complex component architecture, custom hooks, context management, and modern React best practices.`,
+    tech: [
+      "React",
+      "Time Travel",
+      "State Flow",
+      "Reducers",
+      "Error Boundaries",
+      "Advanced Hooks",
+      "Advanced Context API",
+      "React Router",
+      "Context API",
+    ],
+    link: "https://github.com/phyoewaiaung/react-advanced-guides",
+    demo: "https://react-advanced-guides-iv3n.vercel.app/",
+    image: "/images/demo-react1.png",
   },
   {
     title: "Portfolio v1",
