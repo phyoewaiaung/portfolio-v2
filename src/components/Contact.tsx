@@ -131,11 +131,26 @@ export default function Contact() {
                     className="w-full border-violet-400/30 bg-violet-400/5 text-white hover:bg-violet-400/10 hover:border-violet-400/50"
                   >
                     <a
-                      href="/resume.pdf"
+                      href="/resume-phyowaiaung.pdf"
                       download
                       className="flex items-center justify-center gap-2"
                     >
                       Download Resume
+                    </a>
+                  </Button>
+
+                  <Button
+                    asChild
+                    size="lg"
+                    variant="outline"
+                    className="w-full border-fuchsia-400/30 bg-fuchsia-400/5 text-white hover:bg-fuchsia-400/10 hover:border-fuchsia-400/50"
+                  >
+                    <a
+                      href="/coverletter.pdf"
+                      download
+                      className="flex items-center justify-center gap-2"
+                    >
+                      Download Cover Letter
                     </a>
                   </Button>
                 </div>
